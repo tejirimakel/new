@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMI Studio</title>
+  <link rel="icon" type="image/ico" href="img/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+    <header class="navbar">
+      <nav class="navbar-container">
+        <a href="#"><img src="img/logo.png" alt="logo image" class="logo" /></a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button type="button" aria-label="menu" id="menuToggle" class="menu-button">
+          <i class="fa fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    <div id="mobileMenu" class="mobile-menu">
+      <button id="closeMenu" class="close-button">&times;</button>
+      <ul class="mobile-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <section id="news" class="news-section">
+        <h2>Latest Tech News</h2>
+        <div class="news-grid" id="newsGrid">
+        
+        </div>
+      </section>
+      
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-bottom" id="footerYear"></div>
+        </div>
+      </footer>
+      <script src="js/main.js"></script>
+</body>

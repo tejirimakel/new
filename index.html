@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMI Studio</title>
+  <link rel="icon" type="image/ico" href="img/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+  <header class="navbar">
+    <nav class="navbar-container">
+      <a href="#"><img src="img/logo.png" alt="logo image" class="logo" /></a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button type="button" aria-label="menu" id="menuToggle" class="menu-button">
+        <i class="fa fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="closeMenu" class="close-button">&times;</button>
+    <ul class="mobile-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  
+
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1>TMI Studio</h1>
+      <p>Think | Make | Innovate</p>
+      <a href="#services" class="cta-button">Discover Services</a>
+    </div>
+  </section>
+
+
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900">Our Services</h2>
+        <p class="mt-4 text-lg text-gray-600">
+          We deliver cutting-edge solutions to help your business grow and innovate.
+        </p>
+      </div>
+  
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    
+        <div class="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+          <p class="">
+            Modern, responsive websites tailored to your business needs with seamless user experiences.
+          </p>
+        </div>
+  
+
+        <div class="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-green-600">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9 12l2 2l4-4"></path>
+            </svg>
+          </div>          
+          <h3 class="text-xl font-semibold mb-3">AI Solutions</h3>
+          <p class="">
+            Leverage artificial intelligence to automate processes, gain insights, and scale efficiently.
+          </p>
+        </div>
+  
+    
+        <div class="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L4.5 12l5.25-5M14.25 7L19.5 12l-5.25 5" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Cloud Solutions</h3>
+          <p class="">
+            Secure, scalable cloud infrastructure to support your business growth and innovation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-grid">
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <input type="text" id="subject" placeholder="Subject" />
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div>
+        <h3>Our Location</h3>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-bottom" id="footerYear"></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
