@@ -89,13 +89,25 @@ if (document.getElementById("map")) {
 }
 
 
-const newsGrid = document.getElementById("newsGrid");
-if (newsGrid) {
+document.addEventListener("DOMContentLoaded", () => {
+  const newsGrid = document.getElementById("newsGrid");
+
+  if (!newsGrid) return;
+
   const NEWS_API_KEY = "87a7d2f82f814e3082d4a38e0e543189";
-  fetch(`https://newsapi.org/v2/everything?q=technology&apiKey=${NEWS_API_KEY}&pageSize=6`)
+  const NEWS_URL = `https://newsapi.org/v2/everything?q=technology&apiKey=${NEWS_API_KEY}&pageSize=6`;
+
+
+  fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(NEWS_URL)}`)
     .then(res => res.json())
     .then(data => {
-      data.articles.forEach(article => {
+      const newsData = JSON.parse(data.contents);
+      if (!newsData.articles || newsData.articles.length === 0) {
+        newsGrid.innerHTML = "<p>No news available.</p>";
+        return;
+      }
+
+      newsData.articles.forEach(article => {
         const card = document.createElement("div");
         card.className = "news-card";
         card.innerHTML = `
@@ -107,5 +119,8 @@ if (newsGrid) {
         newsGrid.appendChild(card);
       });
     })
-    .catch(err => console.error(err));
-}
+    .catch(err => {
+      console.error("Failed to fetch news:", err);
+      newsGrid.innerHTML = "<p>Failed to load news.</p>";
+    });
+});
