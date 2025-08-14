@@ -63,7 +63,7 @@ contactForm.addEventListener("submit", function(e) {
     emailjs.sendForm(
         "service_qkbmoks",
         "template_oinnxq9",
-        "#contactForm"
+        "contactForm"
     )
     .then(() => {
         alert("Message sent successfully!");
