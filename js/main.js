@@ -51,28 +51,29 @@ const footerYear = document.getElementById("footerYear");
 if (footerYear) footerYear.innerHTML = `&copy; ${year} TMI Studio. All rights reserved.`;
 
 
-emailjs.init("DLt8ki8PN2elTsOER");
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
 
+  if (!contactForm) return;
 
-const contactForm = document.getElementById("contactForm");
-
-contactForm.addEventListener("submit", function(e) {
+  contactForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
-
+    // Use form directly
     emailjs.sendForm(
-        "service_qkbmoks",
-        "template_pfmzit2",
-        "contactForm"
+      "service_qkbmoks",   // Your Service ID
+      "template_pfmzit2",  // Your Template ID
+      this                  // Use the form element
     )
     .then(() => {
-        alert("Message sent successfully!");
-        contactForm.reset();
+      alert("Message sent successfully!");
+      contactForm.reset();
     })
     .catch((err) => {
-        console.error("EmailJS error:", err);
-        alert("Failed to send message. Please try again later.");
+      console.error("EmailJS error:", err);
+      alert("Failed to send message. Please try again later.");
     });
+  });
 });
 
 
