@@ -376,6 +376,50 @@ a {
 
 }
 
+#services .group {
+  padding: 2rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+#services .group:hover {
+  box-shadow: 0 10px 15px rgba(255, 220, 189, 0.1);
+  transform: translateY(-5px);
+}
+
+
+#services .icon-box {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease;
+  background-color: var(--color-secondary);
+}
+
+
+#services svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+#services h3 {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-secondary);
+}
+
+#services .text-gray-600 {
+  color: var(--color-mid-gray);
+}
+
+
 
 @media (max-width: 1024px) {
   .nav-links {
