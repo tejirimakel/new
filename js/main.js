@@ -51,7 +51,7 @@ const footerYear = document.getElementById("footerYear");
 if (footerYear) footerYear.innerHTML = `&copy; ${year} TMI Studio. All rights reserved.`;
 
 
-emailjs.init("");
+emailjs.init("DLt8ki8PN2elTsOER");
 
 
 const contactForm = document.getElementById("contactForm");
@@ -61,8 +61,8 @@ contactForm.addEventListener("submit", function(e) {
 
 
     emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_qkbmoks",
+        "template_oinnxq9",
         "#contactForm"
     )
     .then(() => {
@@ -91,7 +91,7 @@ if (document.getElementById("map")) {
 
 const newsGrid = document.getElementById("newsGrid");
 if (newsGrid) {
-  const NEWS_API_KEY = "";
+  const NEWS_API_KEY = "87a7d2f82f814e3082d4a38e0e543189";
   fetch(`https://newsapi.org/v2/everything?q=technology&apiKey=${NEWS_API_KEY}&pageSize=6`)
     .then(res => res.json())
     .then(data => {

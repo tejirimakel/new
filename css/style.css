@@ -182,6 +182,11 @@ a {
   color: var(--color-light-gray);
 }
 
+.client-story-section {
+  padding: 4rem 2rem;
+  background: var(--color-primary);
+}
+
 
 .contact-section {
   padding: 4rem 3rem 2rem 3rem ;
@@ -423,6 +428,31 @@ a {
   display: grid;
   gap: 2rem;
 }
+.video-wrapper iframe {
+  border-radius: var(--radius);
+  margin-bottom: 3rem;
+}
+
+.svg-icon {
+  width: 3.5rem; 
+  height: 3.5rem;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: var(--color-secondary);
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.svg-icon svg {
+  height: 1.75rem; 
+  width: 1.75rem; 
+  color: var(--color-white);
+  transition: color 0.3s ease;
+
+}
+
 
 @media (max-width: 1024px) {
   .nav-links {
@@ -543,26 +573,6 @@ a {
   .news-card h4 { margin: 10px 0; }
 }
 
-.svg-icon {
-  width: 3.5rem; 
-  height: 3.5rem;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  background-color: var(--color-secondary);
-  border-radius: var(--radius);
-  margin-bottom: 1.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.svg-icon svg {
-  height: 1.75rem; 
-  width: 1.75rem; 
-  color: var(--color-white);
-  transition: color 0.3s ease;
-
-}
-
 
 @media (max-width: 575px) {
 
@@ -603,6 +613,9 @@ a {
   }
   #services .grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .video-wrapper iframe {
+    padding: 0 8rem;
   }
 }
 
