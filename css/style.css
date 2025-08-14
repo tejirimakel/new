@@ -314,83 +314,6 @@ a {
   background: none;
 }
 
-.weather-section {
-  padding: 4rem 2rem;
-  background: var(--color-primary);
-  color: var(--color-light-gray);
-  text-align: center;
-}
-
-.weather-card {
-  background: var(--color-black);
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: var(--shadow);
-  display: inline-block;
-  max-width: 320px;
-  width: 100%;
-}
-
-.weather-card h3 {
-  font-size: var(--fs-lg);
-  margin-bottom: 1rem;
-}
-
-.weather-temp {
-  font-size: var(--fs-xl);
-  color: var(--color-secondary);
-  margin-bottom: 1rem;
-}
-
-.weather-desc {
-  font-size: var(--fs-sm);
-  color: var(--color-mid-gray);
-}
-
-
-.news-section {
-  padding: 4rem 2rem;
-  background: var(--color-primary);
-}
-
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.news-card {
-  background: var(--color-black);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s;
-}
-
-.news-card:hover {
-  transform: translateY(-5px);
-}
-
-.news-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.news-card-content {
-  padding: 1rem;
-}
-
-.news-card-content h4 {
-  font-size: var(--fs-sm);
-  margin-bottom: 0.5rem;
-  color: var(--color-light-gray);
-}
-
-.news-card-content p {
-  font-size: var(--fs-xs);
-  color: var(--color-mid-gray);
-}
 
 #services {
   padding-top: 5rem;
@@ -568,9 +491,24 @@ a {
 
   .news-section { padding: 40px; background: var(--color-primary); }
   .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-  .news-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  .news-card { background: var(--color-black); padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
   .news-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
-  .news-card h4 { margin: 10px 0; }
+  .news-card h4 { margin: 10px 0;  color: var(--color-light-gray); }
+  .news-card p { color: var(--color-light-gray); font-size: var(--fs-sm); }
+  .news-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--color-secondary);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .news-section h2 {
+    font-size: var(--fs-xl);
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--color-light-gray);
+  }
+  
 }
 
 

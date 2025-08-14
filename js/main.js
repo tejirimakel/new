@@ -59,11 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
   contactForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    // Use form directly
+   
     emailjs.sendForm(
-      "service_qkbmoks",   // Your Service ID
-      "template_pfmzit2",  // Your Template ID
-      this                  // Use the form element
+      "service_qkbmoks",  
+      "template_pfmzit2",  
+      this                
     )
     .then(() => {
       alert("Message sent successfully!");
