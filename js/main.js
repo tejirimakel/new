@@ -62,7 +62,7 @@ contactForm.addEventListener("submit", function(e) {
 
     emailjs.sendForm(
         "service_qkbmoks",
-        "template_oinnxq9",
+        "template_pfmzit2",
         "contactForm"
     )
     .then(() => {
